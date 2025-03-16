@@ -13,13 +13,6 @@ error_message() {
   echo -e "\033[1;31m[ERROR]\033[0m $1"
 }
 
-# Pre-setup: Set timezone and NTP
-verbose "Setting up timezone and NTP."
-timedatectl set-timezone Europe/Vienna
-verbose "Timezone set to Europe/Vienna."
-timedatectl set-ntp true
-verbose "NTP enabled."
-
 # Function to execute a command and check for success
 execute_command() {
     local cmd="$1"
